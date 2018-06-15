@@ -1,0 +1,86 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>stuck_fan_2</name>
+  <uid>533278ec-6410-4d4b-a14b-8260f0e77b18</uid>
+  <version_id>7ac9038b-e563-4459-a6b3-5eb7b620c7a4</version_id>
+  <xml_checksum>266557E5</xml_checksum>
+  <class_name>StuckFan2</class_name>
+  <display_name>StuckFan2</display_name>
+  <description>This measure assume the fan is stuck</description>
+  <modeler_description>This model is only applied to air loop</modeler_description>
+  <arguments>
+    <argument>
+      <name>object</name>
+      <display_name>Choose an Air Loop to Alter.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>{3b9c5afc-85a0-4842-8cf3-217998170e33}</default_value>
+      <choices>
+        <choice>
+          <value>{3b9c5afc-85a0-4842-8cf3-217998170e33}</value>
+          <display_name>*All Air Loops*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>fan_power_min_airflow_rate</name>
+      <display_name>Fan Power Minimum Air Flow Rate (m3/s)</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Ventilation</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>stuck_fan_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>3C4F6D02</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>1C58611A</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.0</identifier>
+        <min_compatible>1.7.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>728AE268</checksum>
+    </file>
+  </files>
+</measure>

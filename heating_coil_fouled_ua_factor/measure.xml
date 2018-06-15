@@ -1,0 +1,94 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>heating_coil_fouled_u_afactor</name>
+  <uid>c626a384-855b-4df1-bd8b-a4b6b5a00be4</uid>
+  <version_id>757399d4-ace3-40a8-a1ee-9f200819f0e0</version_id>
+  <xml_checksum>470FC630</xml_checksum>
+  <class_name>HeatingCoilFouledUAfactor</class_name>
+  <display_name>HeatingCoilFouled_UAfactor</display_name>
+  <description>This measure assume the heating coil is fouled, which the UA factore is reduced. The user need to give the UA factor and the percentage of the foulding.</description>
+  <modeler_description>This model is only applied to heating coil of water system</modeler_description>
+  <arguments>
+    <argument>
+      <name>object</name>
+      <display_name>Choose an Air Loop to Alter.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>{04f31cc2-02d4-4fff-9a36-f17dd29fe927}</default_value>
+      <choices>
+        <choice>
+          <value>{04f31cc2-02d4-4fff-9a36-f17dd29fe927}</value>
+          <display_name>*All Air Loops*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>uFactor_drop_percent</name>
+      <display_name>uFactor_drop_percent%</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
+    <argument>
+      <name>nominal_UFactorTimesArea</name>
+      <display_name>Nominal UFactor Times Area (W/k)</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Heating</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>heating_coil_fouled_u_afactor_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>ED334469</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>CB507922</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.0</identifier>
+        <min_compatible>1.7.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>88976D39</checksum>
+    </file>
+  </files>
+</measure>

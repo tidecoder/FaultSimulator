@@ -1,0 +1,159 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>stuck_outside_air_damper_of_economizer_3</name>
+  <uid>0fb3efe6-4e14-4142-8187-22f8edb4ac82</uid>
+  <version_id>c8afdca3-1826-4338-b960-be3b9f0b9286</version_id>
+  <xml_checksum>266557E5</xml_checksum>
+  <class_name>StuckOutsideAirDamperOfEconomizer3</class_name>
+  <display_name>StuckOutsideAirDamperOfEconomizer3</display_name>
+  <description>This measure is based on the EnableEconomizer. It specifies the percentage of the air damper opening, which is to be used by the compact schedule.</description>
+  <modeler_description>This measure needs the percentage of outside air damper of economizer, which is applied to the compact schedule. </modeler_description>
+  <arguments>
+    <argument>
+      <name>object</name>
+      <display_name>Choose an Air Loop to Alter.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>{2d85717c-cc53-4dd2-8737-00aff2c2d7ad}</default_value>
+      <choices>
+        <choice>
+          <value>{2d85717c-cc53-4dd2-8737-00aff2c2d7ad}</value>
+          <display_name>*All Air Loops*</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>economizer_type</name>
+      <display_name>Economizer Control Type.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value>FixedDryBulb</value>
+          <display_name>FixedDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>FixedEnthalpy</value>
+          <display_name>FixedEnthalpy</display_name>
+        </choice>
+        <choice>
+          <value>DifferentialDryBulb</value>
+          <display_name>DifferentialDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>DifferentialEnthalpy</value>
+          <display_name>DifferentialEnthalpy</display_name>
+        </choice>
+        <choice>
+          <value>FixedDewPointAndDryBulb</value>
+          <display_name>FixedDewPointAndDryBulb</display_name>
+        </choice>
+        <choice>
+          <value>NoEconomizer</value>
+          <display_name>NoEconomizer</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>econoMaxDryBulbTemp</name>
+      <display_name>Economizer Maximum Limit Dry-Bulb Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>69</default_value>
+    </argument>
+    <argument>
+      <name>econoMaxEnthalpy</name>
+      <display_name>Economizer Maximum Enthalpy (Btu/lb).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>28</default_value>
+    </argument>
+    <argument>
+      <name>econoMaxDewpointTemp</name>
+      <display_name>Economizer Maximum Limit Dewpoint Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>55</default_value>
+    </argument>
+    <argument>
+      <name>econoMinDryBulbTemp</name>
+      <display_name>Economizer Minimum Limit Dry-Bulb Temperature (F).</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>-148</default_value>
+    </argument>
+    <argument>
+      <name>norminal_min_outdoor_air_flow_rate</name>
+      <display_name>Minimum Outdoor Air Flow Rate (m3/s)</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
+    <argument>
+      <name>norminal_max_outdoor_air_flow_rate</name>
+      <display_name>Maximum Outdoor Air Flow Rate (m3/s)</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Ventilation</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>stuck_outside_air_damper_of_economizer_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C71776D5</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>BB3F76F4</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.7.0</identifier>
+        <min_compatible>1.7.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>DE7DA690</checksum>
+    </file>
+  </files>
+</measure>
